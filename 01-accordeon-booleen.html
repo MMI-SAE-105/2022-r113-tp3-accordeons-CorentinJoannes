@@ -19,8 +19,12 @@
         </div>
       </section>
       <section>
-        <button>bouton 2</button>
-        <p>Quas assumenda quam maxime ab distinctio. Ad omnis nihil velit culpa eum rem ex et, laboriosam debitis consequatur ab ipsam magni recusandae hic vero ea repellat ipsum dignissimos veritatis. Similique.</p>
+        <div x-data="{ open: false }">
+          <button @click="open = ! open">Bouton 2</button>
+          <span x-show="open" x-transition>
+            <p>Quas assumenda quam maxime ab distinctio. Ad omnis nihil velit culpa eum rem ex et, laboriosam debitis consequatur ab ipsam magni recusandae hic vero ea repellat ipsum dignissimos veritatis. Similique.</p>
+          </span>
+        </div>
       </section>
       <section>
         <button>bouton 3</button>
