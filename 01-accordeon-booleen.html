@@ -27,8 +27,11 @@
         </div>
       </section>
       <section>
-        <button>bouton 3</button>
-        <p>Autem, repellat asperiores alias rerum voluptas dicta quasi numquam, adipisci totam atque, consequatur soluta quia. Et officia, ex optio quo corrupti minus aperiam, labore ab quia velit, rerum ratione eveniet.</p>
+        <div x-data="{ open: false }">
+          <button @click="open = ! open">Bouton 3</button>
+          <span x-show="open" x-transition>
+            <p>Autem, repellat asperiores alias rerum voluptas dicta quasi numquam, adipisci totam atque, consequatur soluta quia. Et officia, ex optio quo corrupti minus aperiam, labore ab quia velit, rerum ratione eveniet.</p>
+          </span>
       </section>
     </div>
   </body>
