@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="fr"><head>
   <meta charset="utf-8">
   <title>Accordéon - jQuery</title>
@@ -67,51 +68,64 @@
     }
   </style>
 </head>
-<body>
-  <h1>Accordéon</h1>
-  <ul id="accordeon">
-    <li class="actif">
-      <figure>
-        <figcaption>
-          <h3>Qui suis-je ?</h3>
 
-          <p>Je m'appel Corentin Joannes et j'ai 18ans</p>
-        </figcaption>
-      </figure>
-    </li>
-    <li class="">
-      <figure>
-        <figcaption>
-          <h3>En quoi consiste la MMI ?</h3>
-  
-          <p>La MMI c'est principalement de la com', du design et du dev.</p>
-        </figcaption>
-      </figure>
-    </li>
-  </ul>
-  <script>
-    (function () {
-      "use strict";
-  
-      var listeLI = document.querySelectorAll('ul#accordeon>li');
-  
-  
-      function basculeClassActif() {
-        for (var i = 0; i < listeLI.length; i++) {
-          var unLi = listeLI[i];
-          unLi.classList.remove('actif');
-        }
-        this.classList.add('actif');
-      }
-  
+<body>
+<h1>Accordéon</h1>
+<ul id="accordeon">
+  <li>
+    <figure>
+      <img alt="src-media.com" width="102" height="77" src="https://picsum.photos/100?random=$">
+      <figcaption>
+        <h3>Qui suis-je ?</h3>
+
+        <p>Je m'appel Corentin Joannes et j'ai 18ans</p>
+      </figcaption>
+    </figure>
+  </li>
+  <li class="actif">
+    <figure>
+      <img alt="src-media.com" width="102" height="77" src="https://picsum.photos/100?random=$">
+      <figcaption>
+        <h3>Qu'est-ce que je fais dans la vie ?</h3>
+
+        <p>Je suis étudiant à Montbéliard dans la formation BUT MMI.</p>
+      </figcaption>
+    </figure>
+  </li>
+  <li>
+    <figure>
+      <img alt="src-media.com" width="102" height="77" src="https://picsum.photos/100?random=$">
+      <figcaption>
+        <h3>Qu'est-ce que la MMI ?</h3>
+
+        <p>La MMI c'est principalement de la com, du design et du dev.</p>
+      </figcaption>
+    </figure>
+  </li>
+</ul>
+<script>
+  (function () {
+    "use strict";
+
+    var listeLI = document.querySelectorAll('ul#accordeon>li');
+
+
+    function basculeClassActif() {
       for (var i = 0; i < listeLI.length; i++) {
-        var unLI = listeLI[i];
-        unLI.addEventListener("click", basculeClassActif);
+        var unLi = listeLI[i];
+        unLi.classList.remove('actif');
       }
-  
-    }());
-  
-  </script>
-  
-  
-  </body></html>
+      this.classList.add('actif');
+    }
+
+    for (var i = 0; i < listeLI.length; i++) {
+      var unLI = listeLI[i];
+      unLI.addEventListener("click", basculeClassActif);
+    }
+
+  }());
+
+</script>
+
+
+</body></html>
